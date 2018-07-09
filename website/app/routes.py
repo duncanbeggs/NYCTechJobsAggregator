@@ -6,6 +6,7 @@ from app import app
 def index():
     user = {'username': 'Duncan'}
 
+    # --
     #this is a list where each element is a dictionary that has author and 
     #body fields. 
     posts = [
