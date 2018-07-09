@@ -32,6 +32,7 @@ for job in jobs_dict:
     description = job['Description']
     description = description.replace("'", "''")
     insertString = "INSERT INTO job_listings VALUES('" + title + "', '" + url + "', '" + address + "', '" + compensation + "', '" + employmentType + "', '" + "TEMP DESCRIPTION" + "');"
+
     try: 
         print("inserting: " + insertString)
         queryCursor.execute(insertString) 
@@ -41,3 +42,4 @@ for job in jobs_dict:
 conn.commit()
 queryCursor.close()
 conn.close()
+
